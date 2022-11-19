@@ -8,3 +8,4 @@
 -> success notification, when you copy the text it will show a copy successfully notification which will close in 5s
 <br>
 -> modal box, which will pop-up when you click the twitter button
+![C819DAFF-7D87-4C7F-9911-DAF51603099E_1_102_o](https://user-images.githubusercontent.com/91050243/202851506-82d716e4-a1b1-491d-9833-d087f411e814.jpeg)
