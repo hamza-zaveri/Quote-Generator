@@ -30,12 +30,37 @@
         <div class="buttons">
             <div class="features">
                 <ul>
-                    <li class="sound"><i class="fas fa-volume-up"></i></li>
+                    <div class="tooltip">
+                        <li class="sound"><i class="fas fa-volume-up"></i></li>
+                        <span class="tooltiptext">It won't work in google chrome</span>
+                    </div>
                     <li class="copy"><i class="fas fa-copy"></i></li>
-                    <li class="twitter"><i class="fab fa-twitter"></i></li>
+                    <li class="open">
+                        <a href="#twitter-modal"><i class="fab fa-twitter"></i></a>
+                    </li>
                 </ul>
                 <button>New Quote</button>
             </div>
+        </div>
+    </div>
+    <div class="toast">
+        <div class="toast-content">
+            <i class="fas fa-solid fa-check check"></i>
+            <div class="message">
+                <span class="text text-1">Copied</span>
+                <span class="text text-2">The text has being copied</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark close"></i>
+        <div class="progress"></div>
+    </div>
+    <div id="twitter-modal">
+        <div class="modal">
+            <h2>Twitter !!</h2>
+            <p>Do you want us to post this quote as your tweet ?</p>
+            <br />
+            <a class="twitter btn" href="#">Yes, post it</a>
+            <a class="close btn" href="#">Close Me!</a>
         </div>
     </div>
     <script src="script.js"></script>

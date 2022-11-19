@@ -7,11 +7,12 @@
 }
 
 body {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100vh; */
     background-color: #5372f0;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -19,6 +20,10 @@ body {
     background: #fff;
     border-radius: 15px;
     padding: 30px 45px 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .wrapper header {
@@ -118,4 +123,241 @@ body {
 button.loading {
     opacity: 0.7;
     pointer-events: none;
+}
+
+
+/* .tooltip {
+    position: absolute;
+    left: 30%;
+    background-color: #ccc;
+    padding: 7px;
+    border-radius: 5px;
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
+.tooltip::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: 100%;
+    border: 10px solid;
+    border-color: #ccc #ccc #ccc #ccc;
+} */
+
+
+/* --------------------------------------------------------------- */
+
+
+/* for displaying, the speaking doesn't work in chrome */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(122, 122, 122);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0.7;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(122, 122, 122) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/* --------------------------------------------------------------- */
+
+
+/* copied successfully message */
+
+.toast {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    border-radius: 12px;
+    background: #ddffdd;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #4caf50;
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toast.active {
+    transform: translateX(0%);
+}
+
+.toast .toast-content {
+    display: flex;
+    align-items: center;
+}
+
+.toast-content .check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.toast-content .message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.message .text {
+    font-size: 20px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.message .text.text-1 {
+    font-weight: 600;
+    color: #333;
+}
+
+.toast .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.toast .close:hover {
+    opacity: 1;
+}
+
+.toast .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+
+.toast .progress:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4caf50;
+}
+
+.progress.active:before {
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    100% {
+        right: 100%;
+    }
+}
+
+
+/* --------------------------------------------------------------- */
+
+
+/* Popup for twitter confirmation */
+
+#twitter-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    /*   width: 50%; */
+    background: #fff;
+    padding: 3rem;
+    text-align: center;
+}
+
+#twitter-modal:not(:target) {
+    opacity: 0;
+    visibility: hidden;
+    /*   transition: opacity 1s, visibility 1s; */
+}
+
+#twitter-modal:target {
+    opacity: 1;
+    visibility: visible;
+    /*   transition: opacity 1s, visibility 1s; */
+}
+
+.open a {
+    text-decoration: none;
+    color: #5372f0;
+}
+
+.open a :hover {
+    color: #ffffff;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 13px 22px;
+    margin-bottom: 20%;
+    border-radius: 20px;
+    background: #5372f0;
+    text-decoration: none;
+    margin-left: 40px;
+    transition: all 0.3s linear;
+}
+
+.btn.twitter:hover {
+    background-color: #204ced;
+}
+
+.btn.close {
+    background-color: #fff;
+    border: 1px solid #5372f0;
+    color: #5372f0;
+}
+
+.btn.close:hover {
+    background-color: #d4dcfa;
 }

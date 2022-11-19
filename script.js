@@ -24,10 +24,17 @@ function randomQuote() {
 
 soundBtn.addEventListener("click", () => {
     //SpeechSynthesisUtterance is a web speech api that represents a speech request
-    let utterance = new SpeechSynthesisUtterance(
-        `${quoteText.innerText} by ${authorName.innerText}`
-    );
-    speechSynthesis.speak(utterance); //speak method of speechSynthesis speaks the utterance
+    //speak method of speechSynthesis speaks the utterance
+
+    if ("speechSynthesis" in window) {
+        let utterance = new SpeechSynthesisUtterance();
+        utterance.text = quoteText.innerText + " by " + authorName.innerText;
+        console.log(utterance.text);
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utterance);
+    } else {
+        alert("speechSynthesis not supported");
+    }
 });
 
 copyBtn.addEventListener("click", () => {
@@ -42,3 +49,25 @@ twitterBtn.addEventListener("click", () => {
 });
 
 quoteBtn.addEventListener("click", randomQuote);
+
+//script for the copied button notification success
+const toast = document.querySelector(".toast");
+const closeIcon = document.querySelector(".close");
+const progress = document.querySelector(".progress");
+
+copyBtn.addEventListener("click", () => {
+    toast.classList.add("active");
+    progress.classList.add("active");
+    setTimeout(() => {
+        toast.classList.remove("active");
+    }, 5000);
+    setTimeout(() => {
+        progress.classList.remove("active");
+    }, 5300);
+});
+closeIcon.addEventListener("click", () => {
+    toast.classList.remove("active");
+    setTimeout(() => {
+        progress.classList.remove("active");
+    }, 300);
+});
