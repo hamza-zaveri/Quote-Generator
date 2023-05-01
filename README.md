@@ -1,11 +1,11 @@
 <h1>Quote-Generator</h1>
 <p>A web page made using HTML, CSS, and Javascript that generates random quotes on clicking the "New Quote" button. Additional functionalities include the ability to hear the quote, copy the quote, and post it on Twitter. The page also includes a tooltip that appears when you hover over the copy button, a success notification that displays when you successfully copy the text and a modal box that pops up when you click the Twitter button.</p>
 <br>
-Quote-Generator Demo : [CodePen Link](https://codepen.io/hamzazaveri/pen/VwdzPOM)
+<p>Quote-Generator Demo :<a href="https://codepen.io/hamzazaveri/pen/VwdzPOM">CodePen Link</a><p>
+<p>You can view a live demo of the project on CodePen
 <br>
-You can view a live demo of the project on CodePen<br>
-Here's a screenshot of the Quote Generator:
-![C819DAFF-7D87-4C7F-9911-DAF51603099E_1_102_o](https://user-images.githubusercontent.com/91050243/202851506-82d716e4-a1b1-491d-9833-d087f411e814.jpeg)
+Here's a screenshot of the Quote Generator:</p>
+<img src="https://user-images.githubusercontent.com/91050243/202851506-82d716e4-a1b1-491d-9833-d087f411e814.jpeg">
 <br>
 <h2>Features</h2>
 <ul>
@@ -30,7 +30,8 @@ Here's a screenshot of the Quote Generator:
 <ol>
 <li>Clone the repository to your local machine</li>
 <li>Open the index.html file in your web browser</li>
- 
+ </ol>
+ <br>
  <h2>Credits</h2>
 <p>This project was created by Hamza Zaveri . Special thanks to kanye.rest for this api and Kanye West for the quotes :)<p>
 <br>
