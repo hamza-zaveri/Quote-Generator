@@ -9,3 +9,5 @@
 <br>
 -> modal box, which will pop-up when you click the twitter button
 ![C819DAFF-7D87-4C7F-9911-DAF51603099E_1_102_o](https://user-images.githubusercontent.com/91050243/202851506-82d716e4-a1b1-491d-9833-d087f411e814.jpeg)
+
+here's the codepen link : [LINK](https://codepen.io/hamzazaveri/pen/VwdzPOM)
